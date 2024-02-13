@@ -1,7 +1,7 @@
-export default function About() {
+export default function Contact() {
   return (
-    <div id="aboutme" className="bg-slate-300 text-black p-32">
-      <h1 className="text-4xl py-5">About Me</h1>
+    <div id="contact" className="bg-slate-300 text-black p-32">
+      <h1 className="text-4xl py-5">Contact</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta
         dui metus, eget pulvinar odio auctor eget. Etiam semper, massa quis
