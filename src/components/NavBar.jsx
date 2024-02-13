@@ -16,6 +16,7 @@ export default function NavBar() {
         >
           Projects
         </h1>
+        <h1 className="px-5">Contact</h1>
       </nav>
     </div>
   );

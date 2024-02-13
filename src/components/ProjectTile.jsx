@@ -1,31 +1,33 @@
-import geyikhomepage from "../assets/geyik_homepage.png";
-
-export default function ProjectTile() {
-  let hasLogo = true;
+/* eslint-disable react/prop-types */
+export default function ProjectTile(props) {
+  const project = props.project;
   return (
-    <div className="flex">
-      <div>
-        <div className="flex w-auto">
-          <h1>Geyik</h1>
-          {hasLogo ? (
+    <div className="flex justify-between space-y-10">
+      <div className=" items-center align-middle">
+        <div className="flex  justify-content  align-middle items-center text-center ">
+          <h1 className="text-3xl font-bold">{project.name}</h1>
+
+          {project.logoUrl != "" ? (
             <img
-              className="w-1/12"
-              src="https://firebasestorage.googleapis.com/v0/b/hasanerdil-portfolio.appspot.com/o/geyikLogo.png?alt=media&token=85a844c5-6827-426d-bec8-c27a7c0bdc71"
-              alt="geyikLogo"
+              className="w-1/12 mx-2"
+              src={project.logoUrl}
+              alt={project.logoUrl}
             ></img>
           ) : null}
         </div>
 
-        <p className="w-1/2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          porta dui metus, eget pulvinar odio auctor eget.
+        <p className="w-1/2 align-middle justify-center my-auto items-center ">
+          {project.description}
         </p>
       </div>
-      <img
-        className="rounded-xl object-scale-down w-1/6"
-        src={geyikhomepage}
-        alt="geyik_homepage"
-      ></img>
+
+      {project.image != "" ? (
+        <img
+          className="rounded-xl object-scale-down w-1/6 "
+          src={project.image}
+          alt={project.image}
+        ></img>
+      ) : null}
     </div>
   );
 }
