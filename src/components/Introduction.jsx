@@ -2,7 +2,7 @@ export default function Introduction() {
   return (
     <div
       id="introduction"
-      className="flex p-32 justify-center items-center text-balance "
+      className="flex p-32 justify-center items-center text-pretty "
     >
       <img
         className="w-1/6  h-1/6 rounded-full "

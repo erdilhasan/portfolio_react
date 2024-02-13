@@ -14,7 +14,7 @@ export default function Projects() {
             logoUrl:
               "https://firebasestorage.googleapis.com/v0/b/hasanerdil-portfolio.appspot.com/o/geyikLogo.png?alt=media&token=85a844c5-6827-426d-bec8-c27a7c0bdc71",
             description:
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta dui metus, eget pulvinar odio auctor eget.",
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta dui metus, eget pulvinar odio auctor eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta dui metus, eget pulvinar odio auctor eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porta dui metus, eget pulvinar odio auctor eget.",
             image:
               "https://firebasestorage.googleapis.com/v0/b/hasanerdil-portfolio.appspot.com/o/Screenshot_1697490020.png?alt=media&token=f66fa822-5a19-4aa1-ad0a-97c392f4354d",
           }}

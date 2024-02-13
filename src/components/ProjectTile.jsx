@@ -2,8 +2,8 @@
 export default function ProjectTile(props) {
   const project = props.project;
   return (
-    <div className="flex justify-between space-y-10">
-      <div className=" items-center align-middle">
+    <div className="flex justify-between space-y-10 items-center">
+      <div className=" items-center align-middle ">
         <div className="flex  justify-content  align-middle items-center text-center ">
           <h1 className="text-3xl font-bold">{project.name}</h1>
 
@@ -16,7 +16,7 @@ export default function ProjectTile(props) {
           ) : null}
         </div>
 
-        <p className="w-1/2 align-middle justify-center my-auto items-center ">
+        <p className=" flex w-1/2  align-middle justify-center items-center my-4">
           {project.description}
         </p>
       </div>
