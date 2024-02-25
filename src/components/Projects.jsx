@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
 import ProjectTile from "./ProjectTile";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 
 export default function Projects() {
+  const [projects, setProjects] = useState([]);
+
+  const fetchPost = async () => {
+    await getDocs(collection(db, "projects")).then((querySnapshot) => {
+      const newData = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setProjects(newData);
+    });
+  };
+
+  useEffect(() => {
+    fetchPost();
+  }, []);
+
   return (
     <div
       id="projects"
@@ -8,7 +27,23 @@ export default function Projects() {
     >
       <h1 className="text-4xl py-5">Projects</h1>
       <div className="space-y-10  divide-y">
-        <ProjectTile
+        {projects?.map((pro) => (
+          <ProjectTile
+            key={pro.id}
+            project={{
+              name: pro.name,
+              logoUrl: pro.logoUrl,
+              description: pro.description,
+              image: pro.image,
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+/*
+      <ProjectTile
           project={{
             name: "Geyik",
             logoUrl:
@@ -39,7 +74,4 @@ export default function Projects() {
             image: "",
           }}
         />
-      </div>
-    </div>
-  );
-}
+*/
